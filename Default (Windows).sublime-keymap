@@ -1,0 +1,5 @@
+[
+    { "keys": ["ctrl+alt+l"], "command": "robot_beautify" },
+    { "keys": ["ctrl+alt+e"], "command": "robot_errors" }
+
+]
