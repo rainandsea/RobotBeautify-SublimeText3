@@ -1,0 +1,10 @@
+本次修改有如下几个位置：
+
+robot_beautify.py:
+        s_max_length = max([len(s) for s in names_set]) if names_set else 0
+        v_max_length = max([len(v) for v in names_var]) if names_var else 0
+防止names_set或者names_var为空时报错，在python3.3版本是不能为max函数指定默认值default
+
+res = ' '.join([w.replace(w[0], w[0].upper()) for w in words])
+changed to:
+res = ' '.join([w[0].upper() + w[1:] for w in words])

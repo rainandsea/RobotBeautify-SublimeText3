@@ -1,0 +1,15 @@
+本次修改有如下几个位置：
+
+content_process.py:
+
+1.函数__is_keyword(self, item)判断条件，更改如下：
+a) 增加对纯数字字符串的过滤，如'120'
+b) 增加以数字开始的字符串过滤，如'10.57.205.26', '2min', '10sec'
+c) 增加包含特殊字符'\', '|'的过滤
+d) 增加对等于特殊字符的过滤，如'_', ';', '.'
+
+robot_beautify.py:
+
+1.函数__format_keywords(self, keywords, content)格式准则变化如下：
+a) 之前是所有的keyword中的word全部变成首字母大写其余小写，改变后保证每个word的第一个字母大写
+   其他仍为大写的位置保持不变
