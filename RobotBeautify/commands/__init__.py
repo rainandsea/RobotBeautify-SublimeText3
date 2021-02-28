@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 from .robot_check import RobotCheckCommand
 from .robot_beautify import RobotBeautifyCommand
 from .robot_errors import RobotErrorsCommand
